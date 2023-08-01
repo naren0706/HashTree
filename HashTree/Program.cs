@@ -22,6 +22,7 @@ namespace Hashtree
             binarySearchTree.Insert(67);
             binarySearchTree.Display();
             binarySearchTree.GetSize();
+            binarySearchTree.IfExists(63,binarySearchTree);
         }
     }
 }
