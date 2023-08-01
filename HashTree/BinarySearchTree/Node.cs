@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hashtree
+namespace HashTree.BinarySearchTree
 {
     internal class Node<T>
     {

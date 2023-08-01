@@ -17,8 +17,9 @@ namespace Hashtree.BinarySearchTree
             this.NodeData = nodeData;
             this.left = null;
             this.right = null;
+            this.size = 1;
         }
-        int leftCount = 0, rightCount = 0;
+        int leftCount = 0, rightCount = 0,size=0;
         bool result = false;
         public void Insert(T item)
         {
@@ -37,6 +38,7 @@ namespace Hashtree.BinarySearchTree
                 else
                     this.right.Insert(item);
             }
+            this.size++;
         }
         public void Display()
         {
@@ -54,7 +56,7 @@ namespace Hashtree.BinarySearchTree
         }
         public void GetSize()
         {
-            Console.WriteLine("Size" + " " + (1 + this.leftCount + this.rightCount));
+            Console.WriteLine("Size" + " " + this.size);
         }
         public bool IfExists(T element, BinarySearchTree<T> node)
         {

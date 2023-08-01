@@ -1,6 +1,4 @@
 ﻿using Hashtree.BinarySearchTree;
-using System;
-using System.Collections;
 
 namespace Hashtree
 {
@@ -8,6 +6,7 @@ namespace Hashtree
     {
         static void Main(string[] args)
         {
+            
             BinarySearchTree<int> binarySearchTree = new BinarySearchTree<int>(56);
             binarySearchTree.Insert(30);
             binarySearchTree.Insert(70);
@@ -21,8 +20,8 @@ namespace Hashtree
             binarySearchTree.Insert(65);
             binarySearchTree.Insert(63);
             binarySearchTree.Insert(67);
-            binarySearchTree.GetSize();
             binarySearchTree.Display();
+            binarySearchTree.GetSize();
         }
     }
 }

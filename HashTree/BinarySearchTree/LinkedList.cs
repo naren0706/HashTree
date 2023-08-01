@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hashtree
+namespace HashTree.BinarySearchTree
 {
     public class LinkedList<T>
     {
@@ -13,9 +13,9 @@ namespace Hashtree
         internal void Add(T data)
         {
             Node<T> node = new Node<T>(data);
-            if (this.head == null)
+            if (head == null)
             {
-                this.head = node;
+                head = node;
             }
             else
             {
@@ -30,7 +30,7 @@ namespace Hashtree
         }
         internal void Display()
         {
-            Node<T> temp = this.head;
+            Node<T> temp = head;
             if (temp == null)
             {
                 Console.WriteLine("Linked list is empty");
@@ -45,7 +45,7 @@ namespace Hashtree
         }
         internal int Search(T value)
         {
-            Node<T> node = this.head;
+            Node<T> node = head;
             int count = 0;
             while (node != null)
             {
@@ -60,15 +60,15 @@ namespace Hashtree
         }
         internal void DeleteNodeAtParticularPosition(int position)
         {
-            if (this.head == null)
+            if (head == null)
             {
                 Console.WriteLine("LinkedList is empty");
                 return;
             }
-            Node<T> temp = this.head;
+            Node<T> temp = head;
             if (position == 0)
             {
-                this.head = temp.next;
+                head = temp.next;
                 return;
             }
             for (int i = 0; temp != null && i < position - 1; i++)
